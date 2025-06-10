@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float _speed;
     private Rigidbody2D _rb;
+    
    public Vector2 Dir { get;  set; }
     void Start()
     {

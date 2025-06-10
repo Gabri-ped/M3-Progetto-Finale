@@ -7,7 +7,9 @@ public  class Bullet : MonoBehaviour
 {
     [SerializeField] float speed = 0.5f;
     private Rigidbody2D _rb;
+    [SerializeField] private int _dmg = 1;
     public Vector2 dir {  get; set; }
+    public int _damage => _dmg;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,7 @@ public  class Bullet : MonoBehaviour
     {
         if(collision.collider.CompareTag("Enemy"))
         {
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }
